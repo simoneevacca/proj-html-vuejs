@@ -1,11 +1,13 @@
 <script>
 import { state } from '../../state.js';
 import ClubVs from './ClubVs.vue';
+import Players from './Players.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        ClubVs
+        ClubVs,
+        Players,
     },
 
     data() {
@@ -68,6 +70,12 @@ export default {
 
         </section>
 
+
+       
+        <section>
+           <Players />
+        </section>
+
     </main>
 
 </template>
@@ -90,6 +98,10 @@ main {
             & .club {
                 display: flex;
                 align-items: center;
+
+                & img {
+                    width: 150px;
+                }
 
             }
 
@@ -122,8 +134,9 @@ main {
 
     & .upcoming-matchs {
         margin-top: 2rem;
-        background-image: url("./saha.jpg");
+        background-image: url("/images/saha.jpg");
         background-size: cover;
+
         & .match-table {
             width: 97%;
             padding-top: 2rem;
@@ -133,9 +146,11 @@ main {
             margin-top: 2rem;
             text-align: center;
             margin: auto;
+
             & h3 {
                 color: white;
             }
+
 
             & div {
                 margin-top: 1rem;

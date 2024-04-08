@@ -46,7 +46,7 @@ export default {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        background-color: rgba(0, 0, 0, 0.334);
+        background-color: rgba(0, 0, 0, 0.171);
 
         & .club {
             display: flex;
@@ -71,7 +71,7 @@ export default {
         gap: 2rem;
         margin: 0;
         padding: 0;
-        background-color: rgba(0, 0, 0, 0.575);
+        background-color: rgba(0, 0, 0, 0.421);
         
 
         & div {
