@@ -23,7 +23,7 @@ export default {
 
 <template>
     <main>
-    
+
         <section class="first-match">
             <div class="clubs">
                 <div class="club">
@@ -51,7 +51,23 @@ export default {
         </section>
 
 
-        <ClubVs :club1="state.schalke1" :club2="state.inter" data="October 20, 2022 17:00 pm"/>
+
+        <section class="upcoming-matchs">
+            <div class="match-table">
+                <h3>Upcoming Matchs</h3>
+
+                <div>
+                    <ClubVs :club1="state.schalke1" :club2="state.inter" data="October 20, 2022 17:00 pm" />
+                    <ClubVs :club1="state.atletico" :club2="state.schalke2" data="October 20, 2022 17:00 pm" />
+                    <ClubVs :club1="state.unitedFs" :club2="state.bayern" data="October 20, 2022 17:00 pm" />
+                    <ClubVs :club1="state.arsenal" :club2="state.atletico" data="October 20, 2022 17:00 pm" />
+                    <ClubVs :club1="state.istanbul" :club2="state.unitedFs" data="October 20, 2022 17:00 pm" />
+
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 </template>
@@ -102,6 +118,30 @@ main {
         }
 
 
+    }
+
+    & .upcoming-matchs {
+        margin-top: 2rem;
+        background-image: url("./saha.jpg");
+        background-size: cover;
+        & .match-table {
+            width: 97%;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-top: 2rem;
+            text-align: center;
+            margin: auto;
+            & h3 {
+                color: white;
+            }
+
+            & div {
+                margin-top: 1rem;
+
+            }
+        }
     }
 }
 </style>

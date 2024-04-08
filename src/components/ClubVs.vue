@@ -7,62 +7,81 @@ export default {
 
 <template>
 
-    <div class="clubs">
-        <div class="club">
-            <h3>{{ club1.name }}</h3>
-            <img :src="club1.logo" alt="">
+    <div class="container">
+        <div class="clubs">
+            <div class="club">
+                <img :src="club1.logo" alt="">
+                <h3>{{ club1.name }}</h3>
+            </div>
+            <div class="vs">VS</div>
+            <div class="club">
+                <h3>{{ club2.name }}</h3>
+                <img :src="club2.logo" alt="">
+            </div>
         </div>
-        <div class="vs">VS</div>
-        <div class="club">
-            <img :src="club2.logo" alt="">
-            <h3>{{ club2.name }}</h3>
-        </div>
-    </div>
-    <div class="info">
-        <div>
-            <i class="fa-regular fa-calendar-days"></i>
-            <strong>{{ data }}</strong>
-        </div>
-        <div>
-            <i class="fa-solid fa-circle-plus"></i>
-            <strong>Expert Stadium</strong>
-        </div>
+        <div class="info">
+            <div>
+                <i class="fa-regular fa-calendar-days"></i>
+                <strong>{{ data }}</strong>
+            </div>
+            <div>
+                <i class="fa-solid fa-circle-plus"></i>
+                <strong>Expert Stadium</strong>
+            </div>
 
+        </div>
     </div>
 
 
 </template>
 
-<style>
+<style scoped>
+.container {
+    
 
-& .clubs {
+    & .clubs {
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: rgba(0, 0, 0, 0.334);
+
+        & .club {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 2rem;
-
-            & .club {
-                display: flex;
-                align-items: center;
-
-            }
-
-            & .vs {
-                font-size: 5rem;
-                font-weight: bold;
-            }
+            color: white;
 
         }
 
-        & .info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
+        & .vs {
+            font-size: 5rem;
+            font-weight: bold;
+            color: white;
 
-            & div {
-                display: flex;
-                gap: 0.4rem;
-            }
-        }</style>
+        }
+
+    }
+
+    & .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.575);
+        
+
+        & div {
+            display: flex;
+            gap: 0.4rem;
+            color: white;
+            margin: 0;
+            padding: 3px;
+
+        }
+    }
+}
+</style>
