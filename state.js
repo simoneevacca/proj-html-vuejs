@@ -2,43 +2,54 @@ import {reactive} from 'vue'
 
 export const state = reactive({
 
-    clubArray: [
-        {
-            name: 'Istanbul Sports',
-            logo: 'league-club-1.png'
-        },
-        {
-            name: 'United Fs Club',
-            logo: 'league-club-2.png'
-        },
-        {
-            name: 'Schalke Club',
-            logo: 'league-club-3.png'
-        },
-        {
-            name: 'Inter Club',
-            logo: 'league-club-4.png'
-        },
-        {
-            name: 'Madrid Club',
-            logo: 'league-club-5.png'
-        },
-        {
-            name: 'Schalke Club',
-            logo: 'league-club-6.png'
-        },
-        {
-            name: 'Arsenal Club',
-            logo: 'league-club-7.png'
-        },
-        {
-            name: 'Bayern Club',
-            logo: 'league-club-8.png'
-        },
-        {
-            name: 'Atletico Club',
-            logo: 'league-club-9.png'
-        },
-    ]
+    
+        
+        istanbul:{
+                name: 'Istanbul Sports',
+                logo: '/images/league-club-1.png'
+            },
+        
+
+        unitedFs: {
+                name: 'United Fs Club',
+                logo: '/images/league-club-2.png'
+            },
+      
+        schalke1: {
+                name: 'Schalke Club',
+                logo: '/images/league-club-3.png'
+            },
+     
+        inter: {
+                name: 'Inter Club',
+                logo: '/images/league-club-4.png'
+            },
+        
+        madrid: {
+                name: 'Madrid Club',
+                logo: '/images/league-club-5.png'
+            },
+        
+        schalke2: {
+                name: 'Schalke Club',
+                logo: '/images/league-club-6.png'
+            },
+        
+        arsenal: {
+                name: 'Arsenal Club',
+                logo: '/images/league-club-7.png'
+            },
+        
+        bayern: {
+                name: 'Bayern Club',
+                logo: '/images/league-club-8.png'
+            },
+        
+        atletico: {
+                name: 'Atletico Club',
+                logo: '/images/league-club-9.png'
+            },
+    
+    
 
 }) 

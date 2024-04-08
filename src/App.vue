@@ -1,15 +1,20 @@
 <script>
+  import { state } from '../state.js'
+
   import AppHeader from './components/AppHeader.vue';
+  import AppMain from './components/AppMain.vue';
 
   export default {
     components: {
-      AppHeader
+      AppHeader,
+      AppMain
     }
   }
 </script>
 
 <template>
   <AppHeader />
+  <AppMain />
 </template>
 
   
