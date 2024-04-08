@@ -4,3 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.darkButton {
+    background-color: black;
+    color: white;
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    border-radius: 25px; 
+    display: flex;
+    justify-content: center;
+}
