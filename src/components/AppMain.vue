@@ -51,7 +51,7 @@ export default {
         </section>
 
 
-        <ClubVs :club1="state.schalke1" :club2="state.inter" />
+        <ClubVs :club1="state.schalke1" :club2="state.inter" data="October 20, 2022 17:00 pm"/>
     </main>
 
 </template>
