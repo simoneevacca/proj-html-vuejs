@@ -21,6 +21,8 @@ export default {
         return {
 
             state,
+            clientLogos: '/images/client',
+            png: ".png"
         }
     },
     mounted() {
@@ -134,17 +136,17 @@ export default {
                 <div class="fixtures">
                     <h3>Fixtures & results</h3>
                     <div class="table">
-                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
-                    <div class="foot"><strong>View Full Fixtures</strong></div>
-                </div>
+                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <div class="foot"><strong>View Full Fixtures</strong></div>
+                    </div>
 
 
                 </div>
@@ -156,6 +158,14 @@ export default {
             <img src="/images/reklam.jpg" alt="">
         </section>
 
+        <section class="clients">
+            <div  class="container">
+                <div v-for="n in 6">
+                    <img :src="clientLogos + n + png" alt="">
+                </div>
+            </div>
+
+        </section>
 
     </main>
 
@@ -218,9 +228,10 @@ main {
         padding-bottom: 3rem;
         background-image: url("/images/saha.jpg");
         background-size: cover;
+        
 
         & .match-table {
-            width: 97%;
+            width: 1408px;
             padding-top: 2rem;
             display: flex;
             flex-direction: column;
@@ -251,15 +262,18 @@ main {
 
     & .tables {
         padding: 3rem 0;
+
         & h3 {
             margin-bottom: 2rem;
         }
+
         & .container {
             display: flex;
-            width: 97%;
+            gap: 2rem;
+            width: 1408px;
             margin: auto;
 
-            > div {
+            >div {
                 width: 50%;
                 text-align: center;
             }
@@ -300,29 +314,34 @@ main {
             }
 
             & .fixtures {
-                & .table{
-                height: 620px;
+                & .table {
+                    height: 620px;
 
-                & .light, .lighter, .foot {
-                    height: calc(620px / 10);
+                    & .light,
+                    .lighter,
+                    .foot {
+                        height: calc(620px / 10);
+                        width: 100%;
+                    }
+
+                    & .light {
+                        background-color: #ebebeb;
+                    }
+
+                    & .lighter {
+                        background-color: #f3f3f3;
+                    }
+
+                    & .foot {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: black;
+                        color: white;
+                        margin: 0 13.65px;
+
+                    }
                 }
-                
-                & .light {
-                    background-color: #ebebeb;
-                }
-                & .lighter {
-                    background-color: #f3f3f3;
-                }
-                & .foot {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: black;
-                    color: white;
-                    margin: 0 13.65px;
-                    
-                }
-            }
             }
 
 
@@ -334,6 +353,24 @@ main {
         width: 100%;
     }
 
-    
+    & .clients {
+        background-color: black;
+        padding: 4rem 0 3rem 0;
+
+        & .container {
+            width: 1408px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            & img {
+                border: 2px solid white;
+                border-radius: 30px;
+            }
+        }
+    }
+
+
+
 }
 </style>
