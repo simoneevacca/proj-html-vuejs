@@ -10,7 +10,8 @@
                     '/images/slider2-1.jpg',
                     '/images/slider3.jpg',
                     '/images/slider4.jpg',
-                ]
+                ],
+                autoplay: null
             }
         },
         methods: {
@@ -32,6 +33,16 @@
                     this.visibleImage = this.slider.length 
                 }
                 this.visibleImage --
+            },
+
+            startAutoplay(){
+                this.autoplay = setInterval(() => {
+                this.nextImage();
+            }, 3000)
+            },
+
+            stopAutoplay() {
+                clearInterval(this.autoplay)
             }
         }
     }
@@ -74,7 +85,7 @@
         </section>
 
 
-        <div class="slider" v-for="(image, index) in slider">
+        <div class="slider" v-for="(image, index) in slider" @mouseenter="startAutoplay" @mouseleave="stopAutoplay">
             <img :class="isVisible(index)" :src="slider[index]" alt="">
             <div class="controller">
                 <div :class="isVisible(index)" @click="prevImage" class="prev-button"><i class="fa-solid fa-chevron-left"></i></div>

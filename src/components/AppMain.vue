@@ -6,9 +6,6 @@ import LeagueTable from './LeagueTable.vue';
 import Fixtures from './Fixtures.vue';
 import Articles from './Articles.vue';
 
-
-
-
 export default {
     name: 'AppMain',
     components: {
