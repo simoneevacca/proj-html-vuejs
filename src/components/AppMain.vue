@@ -4,6 +4,8 @@ import ClubVs from './ClubVs.vue';
 import Players from './Players.vue';
 import LeagueTable from './LeagueTable.vue';
 import Fixtures from './Fixtures.vue';
+import Articles from './Articles.vue';
+
 
 
 
@@ -14,6 +16,7 @@ export default {
         Players,
         LeagueTable,
         Fixtures,
+        Articles,
 
     },
 
@@ -167,6 +170,10 @@ export default {
                 </div>
             </div>
 
+        </section>
+
+        <section class="articles">
+            <Articles />
         </section>
 
     </main>
