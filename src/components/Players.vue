@@ -100,14 +100,8 @@ export default {
 
             </div>
         </div>
-        <!-- <div v-else-if="viewAll === true">
-            <div v-for="index in 4" :key="index">
-                {{ playersArray[index - 1].name }}
-            </div>
         
-        </div> -->
-        
-        <button @click="showAll()">{{ button }}</button>
+        <button class="darkButton" @click="showAll()">{{ button }}</button>
 
 
     </div>
@@ -119,6 +113,10 @@ export default {
 .container {
     max-width: 95%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 
     & .row {
         display: flex;
@@ -163,6 +161,10 @@ export default {
             }
 
         }
+    }
+    & button {
+        width: 200px;
+        border: 1px solid white;
     }
 }
 </style>

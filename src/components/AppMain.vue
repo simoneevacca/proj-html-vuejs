@@ -72,7 +72,8 @@ export default {
 
 
        
-        <section>
+        <section class="players">
+            <h3>Players</h3>
            <Players />
         </section>
 
@@ -157,6 +158,14 @@ main {
 
             }
         }
+    }
+
+    & .players {
+        padding: 2rem 0;
+        background-image: url("/images/player.jpg");
+        background-size: cover;
+        text-align: center;
+        color: white;
     }
 }
 </style>
