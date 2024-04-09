@@ -88,23 +88,40 @@ export default {
                 <div class="league">
                     <h3>League Table</h3>
                     <table>
-                        <tr class="dark">
-                            <th class="team">TEAM</th>
-                            <th>W</th>
-                            <th>D</th>
-                            <th>L</th>
-                            <th>PTS</th>
-                        </tr>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
-
+                        <thead>
+                            <tr class="dark">
+                                <th class="team">TEAM</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2"
+                                :l="0" :pts="42" />
+                            <LeagueTable :n="2" :logo="state.unitedFs.logo" :name="state.unitedFs.name" :w="14" :d="2"
+                                :l="1" :pts="35" />
+                            <LeagueTable :n="3" :logo="state.schalke1.logo" :name="state.schalke1.name" :w="13" :d="3"
+                                :l="0" :pts="32" />
+                            <LeagueTable :n="4" :logo="state.inter.logo" :name="state.inter.name" :w="13" :d="2" :l="1"
+                                :pts="31" />
+                            <LeagueTable :n="5" :logo="state.madrid.logo" :name="state.madrid.name" :w="13" :d="1"
+                                :l="2" :pts="30" />
+                            <LeagueTable :n="6" :logo="state.schalke2.logo" :name="state.schalke2.name" :w="11" :d="0"
+                                :l="3" :pts="28" />
+                            <LeagueTable :n="7" :logo="state.arsenal.logo" :name="state.arsenal.name" :w="10" :d="5"
+                                :l="0" :pts="26" />
+                            <LeagueTable :n="8" :logo="state.bayern.logo" :name="state.bayern.name" :w="10" :d="2"
+                                :l="2" :pts="24" />
+                            <LeagueTable :n="9" :logo="state.atletico.logo" :name="state.atletico.name" :w="9" :d="0"
+                                :l="4" :pts="20" />
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5"><strong>View Full League Table</strong></td>
+                            </tr>
+                        </tfoot>
                     </table>
 
                 </div>
@@ -212,29 +229,47 @@ main {
 
     & .tables {
         padding: 2rem 0;
-        
+
         & .container {
             display: flex;
             width: 97%;
             margin: auto;
-            
+
             & div {
                 width: 50%;
                 text-align: center;
             }
-            
+
             & .league {
                 table {
                     width: 100%;
                     border-collapse: collapse;
+                    
+                    
 
                     & .dark {
                         background-color: black;
                         color: white;
                         
+
                         & .team {
                             text-align: start;
+                            padding-left: 0.8rem;
                         }
+                    }
+                    & thead {
+                        height: 2rem;
+                      
+                    }
+
+                    & tfoot {
+                        background-color: black;
+                        color: white;
+                        height: 3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
                     }
                 }
             }

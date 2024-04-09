@@ -50,6 +50,7 @@ table {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 0.8rem;
 
 
 }
