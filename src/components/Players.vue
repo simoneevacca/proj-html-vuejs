@@ -52,9 +52,13 @@ export default {
     <div class="container" >
         <div class="row">
             <div class="col" v-for="player in playersArray">
-                <img :src="player.image" alt="">
-
-                <div class="card">{{ player.name }}</div>
+                <div class="card">
+                    <img :src="player.image" alt="">
+                    <div class="text">
+                        <div class="number">{{ player.number }}</div>
+                        <div>{{ player.name }} - {{ player.role }}</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -65,13 +69,48 @@ export default {
 
 <style scoped>
     .container {
-        width: 95%;
+        max-width: 95%;
         margin: auto;
+        
         & .row {
             display: flex;
             flex-wrap: wrap;
+            
+                    
+
             & .col {
                 width: calc((100% / 12) * 3);
+                padding: 2rem;
+                 & .card {
+                     position: relative;
+                    
+                    & img {
+                        width: 100%;
+                        border-radius: 50px;
+                        
+
+                    }
+                    & .text {
+                        position: absolute;
+                        bottom: 0px;
+                        z-index: 1;
+                        background-color: black;
+                        color: white;
+                        width: 100%;
+                        border-radius: 30px;
+                        height: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        & .number {
+                            font-size: 2rem;
+                            font-weight: bold
+                        }
+                    }
+
+                 }
+                
             }
         }
     }
