@@ -2,12 +2,15 @@
 import { state } from '../../state.js';
 import ClubVs from './ClubVs.vue';
 import Players from './Players.vue';
+import LeagueTable from './LeagueTable.vue';
+
 
 export default {
     name: 'AppMain',
     components: {
         ClubVs,
         Players,
+        LeagueTable,
     },
 
     data() {
@@ -71,10 +74,49 @@ export default {
         </section>
 
 
-       
+
         <section class="players">
             <h3>Players</h3>
-           <Players />
+            <Players />
+        </section>
+
+
+
+        <section class="tables">
+            <div class="container">
+
+                <div class="league">
+                    <h3>League Table</h3>
+                    <table>
+                        <tr class="dark">
+                            <th class="team">TEAM</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>PTS</th>
+                        </tr>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+                        <LeagueTable :n="1" :logo="state.istanbul.logo" :name="state.istanbul.name" :w="18" :d="2" :l="0" :pts="42"/>
+
+                    </table>
+
+                </div>
+
+
+
+
+                <div class="fixtures">
+                    <h3>Fixtures & results</h3>
+                </div>
+
+            </div>
         </section>
 
     </main>
@@ -166,6 +208,37 @@ main {
         background-size: cover;
         text-align: center;
         color: white;
+    }
+
+    & .tables {
+        padding: 2rem 0;
+        
+        & .container {
+            display: flex;
+            width: 97%;
+            margin: auto;
+            
+            & div {
+                width: 50%;
+                text-align: center;
+            }
+            
+            & .league {
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    & .dark {
+                        background-color: black;
+                        color: white;
+                        
+                        & .team {
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 </style>
