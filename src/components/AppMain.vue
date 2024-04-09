@@ -82,8 +82,10 @@ export default {
 
 
         <section class="players">
-            <h3>Players</h3>
-            <Players />
+            <div class="container">
+                <h3>Players</h3>
+                <Players />
+            </div>
         </section>
 
 
@@ -159,7 +161,7 @@ export default {
         </section>
 
         <section class="clients">
-            <div  class="container">
+            <div class="container">
                 <div v-for="n in 6">
                     <img :src="clientLogos + n + png" alt="">
                 </div>
@@ -228,7 +230,7 @@ main {
         padding-bottom: 3rem;
         background-image: url("/images/saha.jpg");
         background-size: cover;
-        
+
 
         & .match-table {
             width: 1408px;
@@ -253,11 +255,16 @@ main {
     }
 
     & .players {
-        padding: 2rem 0;
         background-image: url("/images/player.jpg");
+        padding: 2rem 0;
         background-size: cover;
-        text-align: center;
-        color: white;
+
+        & .container {
+            width: 1408px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
     }
 
     & .tables {
@@ -338,8 +345,6 @@ main {
                         align-items: center;
                         background-color: black;
                         color: white;
-                        margin: 0 13.65px;
-
                     }
                 }
             }
