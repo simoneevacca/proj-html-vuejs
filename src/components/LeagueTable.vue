@@ -45,17 +45,20 @@ export default {
 table {
     width: 100%;
 }
-
-.team {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 0.8rem;
-
-
+& tr {
+    background-color: #f3f3f3;
+    .team {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0.8rem;
+    
+        & img {
+            width: 60px;
+        }
+    
+    }
 }
 
-img {
-    width: 60px;
-}
+
 </style>

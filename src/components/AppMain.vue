@@ -3,6 +3,8 @@ import { state } from '../../state.js';
 import ClubVs from './ClubVs.vue';
 import Players from './Players.vue';
 import LeagueTable from './LeagueTable.vue';
+import Fixtures from './Fixtures.vue';
+
 
 
 export default {
@@ -11,6 +13,8 @@ export default {
         ClubVs,
         Players,
         LeagueTable,
+        Fixtures,
+
     },
 
     data() {
@@ -127,14 +131,31 @@ export default {
                 </div>
 
 
-
-
                 <div class="fixtures">
                     <h3>Fixtures & results</h3>
+                    <div class="table">
+                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs"/>
+                    <div class="foot"><strong>View Full Fixtures</strong></div>
+                </div>
+
+
                 </div>
 
             </div>
         </section>
+
+        <section class="bet-divider">
+            <img src="/images/reklam.jpg" alt="">
+        </section>
+
 
     </main>
 
@@ -194,6 +215,7 @@ main {
 
     & .upcoming-matchs {
         margin-top: 2rem;
+        padding-bottom: 3rem;
         background-image: url("/images/saha.jpg");
         background-size: cover;
 
@@ -228,14 +250,16 @@ main {
     }
 
     & .tables {
-        padding: 2rem 0;
-
+        padding: 3rem 0;
+        & h3 {
+            margin-bottom: 2rem;
+        }
         & .container {
             display: flex;
             width: 97%;
             margin: auto;
 
-            & div {
+            > div {
                 width: 50%;
                 text-align: center;
             }
@@ -244,22 +268,23 @@ main {
                 table {
                     width: 100%;
                     border-collapse: collapse;
-                    
-                    
+
+
 
                     & .dark {
                         background-color: black;
                         color: white;
-                        
+
 
                         & .team {
                             text-align: start;
                             padding-left: 0.8rem;
                         }
                     }
+
                     & thead {
                         height: 2rem;
-                      
+
                     }
 
                     & tfoot {
@@ -273,7 +298,42 @@ main {
                     }
                 }
             }
+
+            & .fixtures {
+                & .table{
+                height: 620px;
+
+                & .light, .lighter, .foot {
+                    height: calc(620px / 10);
+                }
+                
+                & .light {
+                    background-color: #ebebeb;
+                }
+                & .lighter {
+                    background-color: #f3f3f3;
+                }
+                & .foot {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: black;
+                    color: white;
+                    margin: 0 13.65px;
+                    
+                }
+            }
+            }
+
+
         }
     }
+
+    & .bet-divider {
+        text-align: center;
+        width: 100%;
+    }
+
+    
 }
 </style>
