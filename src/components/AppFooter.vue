@@ -25,28 +25,65 @@ export default {
 
                 <div class="col col-5">
                     <h4>Join Our Newsletter</h4>
+                    <p>Subscribe to be informed about important <br> velopments i our club and football world.</p>
+                    <form action="">
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit">Subscribe <i class="fa-solid fa-arrow-right-long"></i></button>
+                    </form>
                 </div>
-                <div class="col col-2">
+                <div class="col col-3">
                     <h4>Education</h4>
+                    <ul>
+                        <li>
+                            <div class="list-item"></div>FIXTURES & RESULTS
+                        </li>
+                        <li>
+                            <div class="list-item"></div>LEAGUE TABLE
+                        </li>
+                        <li>
+                            <div class="list-item"></div>PLAYERS
+                        </li>
+                        <li>
+                            <div class="list-item"></div>GALLERY
+                        </li>
+                    </ul>
                 </div>
-                <div class="col col-2">
+                <div class="col col-3">
                     <h4>Quick Links</h4>
+                    <ul>
+                        <li>
+                            <div class="list-item"></div>HOME
+                        </li>
+                        <li>
+                            <div class="list-item"></div>BLOG
+                        </li>
+                        <li>
+                            <div class="list-item"></div>GALLERY
+                        </li>
+                        <li>
+                            <div class="list-item"></div>CONTACT
+                        </li>
+                    </ul>
+                    
                 </div>
 
             </div>
+
+            <div class="copyright">&#169; 2022 Football Club - All Rights Reserved.</div>
         </div>
     </footer>
 </template>
 
 <style scoped>
 footer {
-    height: 500px;
+    
     background-image: url("/images/footer-bg-football.jpg");
 
     & .container {
         width: 1408px;
         margin: auto;
-        padding-top: 3rem;
+        padding: 5rem 0 3rem 0;
+        color: white;
 
         & .row {
             display: flex;
@@ -54,13 +91,11 @@ footer {
 
             & .col {
                 color: white;
-                
-                border: 1px solid white;
-
                 & i {
                     font-size: 1.5rem;
                     margin-right: 0.4rem;
                 }
+
                 & h4 {
                     font-size: 1.8rem;
                 }
@@ -68,15 +103,21 @@ footer {
 
             & .col-3 {
                 width: calc((100% / 12) * 3);
-                > div {
+                > img {
+                    width: 60px;
+                }
+
+                >div {
                     margin-top: 1rem;
                 }
+
                 >.social {
                     display: flex;
 
                     >a {
                         color: white;
                         text-decoration: none;
+
                         >i {
                             border: 1px solid white;
                             width: 50px;
@@ -88,16 +129,66 @@ footer {
 
                     }
                 }
+
+                >ul {
+                    margin-top: 1.5rem;
+                    list-style: none;
+
+                    >li {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 1rem;
+
+                        >.list-item {
+                            width: 10px;
+                            height: 3px;
+                            background-color: white;
+                        }
+                    }
+                }
             }
 
             & .col-5 {
                 width: calc((100% / 12) * 5);
-                
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                >form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    gap: 0.3rem;
+
+                    >input,
+                    button {
+                        height: 3rem;
+                        border-radius: 1.2rem;
+                    }
+
+                    >input {
+                        padding-left: 1rem;
+                    }
+
+                    >button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+
+
             }
 
-            & .col-2 {
-                width: calc((100% / 12) * 2);
-            }
+
+        }
+        > .copyright {
+            text-align: center;
+            padding: 3rem 0 1rem 0;
         }
     }
 }
