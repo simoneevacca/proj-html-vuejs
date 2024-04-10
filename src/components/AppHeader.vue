@@ -140,7 +140,7 @@ header {
 
                 & li {
                     padding-bottom: 5px;
-                    border-bottom: 3px solid;
+                    border-bottom: 3px solid #ebebeb00;
                     transition: 0.3s;
                 }
 
@@ -220,12 +220,14 @@ header {
         & img.visible {
             width: 100%;
             object-fit: cover;
-
+            
+            
         }
-
-
+        
+        
         & img:not(.visible) {
             display: none;
+            
         }
 
         & .controller {
