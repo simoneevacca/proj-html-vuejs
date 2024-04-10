@@ -102,6 +102,10 @@
 
 
 header {
+        & :hover {
+    /* cursor: url('/images/custom-pointer.png'), auto; */
+
+        }
         nav {
             position: absolute;
             top: 0px;
@@ -130,6 +134,19 @@ header {
                     display: flex;
                     list-style: none;
                     gap: 3rem;
+
+                    & li {
+                        padding-bottom: 5px;
+                        border-bottom: 3px solid;
+                        transition: 0.3s;
+                    }
+                    & li:hover {
+                        border-bottom: 3px solid white;
+                     
+
+                    }
+
+
                     
                     & a {
                     color: white;
