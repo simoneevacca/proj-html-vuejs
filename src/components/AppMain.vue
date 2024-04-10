@@ -219,7 +219,7 @@ main {
         }
 
         & .darkButton {
-            width: 200px;
+            width: 250px;
         }
 
 
@@ -312,7 +312,7 @@ main {
                 & .tfoot {
                     background-color: black;
                     color: white;
-                    height: 3rem;
+                    height: 4rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -327,7 +327,7 @@ main {
                     & .light,
                     .lighter,
                     .foot {
-                        height: calc(620px / 10);
+                        height: calc(572px / 9);
                         width: 100%;
                     }
 
@@ -345,6 +345,7 @@ main {
                         align-items: center;
                         background-color: black;
                         color: white;
+                        height: 4rem;
                     }
                 }
             }
