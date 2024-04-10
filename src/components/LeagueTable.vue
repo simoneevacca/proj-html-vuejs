@@ -52,6 +52,7 @@ table {
         align-items: center;
         justify-content: flex-start;
         padding-left: 0.8rem;
+        gap: 0.5rem;
     
         & img {
             width: 60px;

@@ -124,13 +124,9 @@ export default {
                                 :l="2" :pts="24" />
                             <LeagueTable :n="9" :logo="state.atletico.logo" :name="state.atletico.name" :w="9" :d="0"
                                 :l="4" :pts="20" />
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="5"><strong>View Full League Table</strong></td>
-                            </tr>
-                        </tfoot>
+                        </tbody>                      
                     </table>
+                    <div class="tfoot"><strong>View Full League Table</strong></div>
 
                 </div>
 
@@ -139,14 +135,14 @@ export default {
                     <h3>Fixtures & results</h3>
                     <div class="table">
                         <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="light" :club1="state.istanbul" :club2="state.unitedFs" />
-                        <Fixtures class="lighter" :club1="state.istanbul" :club2="state.unitedFs" />
+                        <Fixtures class="light" :club1="state.schalke1" :club2="state.inter" />
+                        <Fixtures class="lighter" :club1="state.madrid" :club2="state.schalke2" />
+                        <Fixtures class="light" :club1="state.arsenal" :club2="state.bayern" />
+                        <Fixtures class="lighter" :club1="state.atletico" :club2="state.istanbul" />
+                        <Fixtures class="light" :club1="state.unitedFs" :club2="state.schalke1" />
+                        <Fixtures class="lighter" :club1="state.inter" :club2="state.madrid" />
+                        <Fixtures class="light" :club1="state.schalke2" :club2="state.arsenal" />
+                        <Fixtures class="lighter" :club1="state.bayern" :club2="state.atletico" />
                         <div class="foot"><strong>View Full Fixtures</strong></div>
                     </div>
 
@@ -312,15 +308,15 @@ main {
 
                     }
 
-                    & tfoot {
-                        background-color: black;
-                        color: white;
-                        height: 3rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                    }
+                }
+                & .tfoot {
+                    background-color: black;
+                    color: white;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
                 }
             }
 
