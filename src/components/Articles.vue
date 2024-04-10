@@ -93,7 +93,7 @@ export default {
     text-align: center;
 
     & .ico {
-        width: 220px;
+        width: 170px;
         aspect-ratio: 1;
         border-radius: 50%;
         background-color: black;
@@ -103,10 +103,10 @@ export default {
 
         & .fa-thumbs-up {
             color: white;
-            font-size: 5rem;
+            font-size: 3rem;
             border: 5px solid white;
             border-radius: 50%;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
     }

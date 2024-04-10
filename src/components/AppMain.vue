@@ -62,7 +62,6 @@ export default {
         </section>
 
 
-
         <section class="upcoming-matchs">
             <div class="match-table">
                 <h3>Upcoming Matchs</h3>
@@ -80,14 +79,12 @@ export default {
         </section>
 
 
-
         <section class="players">
             <div class="container">
                 <h3>Players</h3>
                 <Players />
             </div>
         </section>
-
 
 
         <section class="tables">
@@ -124,7 +121,7 @@ export default {
                                 :l="2" :pts="24" />
                             <LeagueTable :n="9" :logo="state.atletico.logo" :name="state.atletico.name" :w="9" :d="0"
                                 :l="4" :pts="20" />
-                        </tbody>                      
+                        </tbody>
                     </table>
                     <div class="tfoot"><strong>View Full League Table</strong></div>
 
@@ -152,9 +149,11 @@ export default {
             </div>
         </section>
 
+
         <section class="bet-divider">
             <img src="/images/reklam.jpg" alt="">
         </section>
+
 
         <section class="clients">
             <div class="container">
@@ -165,9 +164,13 @@ export default {
 
         </section>
 
+
         <section class="articles">
             <Articles />
         </section>
+
+
+
 
     </main>
 
@@ -309,6 +312,7 @@ main {
                     }
 
                 }
+
                 & .tfoot {
                     background-color: black;
                     color: white;
@@ -317,6 +321,8 @@ main {
                     align-items: center;
                     justify-content: center;
                     width: 100%;
+                    cursor: pointer;
+
                 }
             }
 
@@ -346,6 +352,8 @@ main {
                         background-color: black;
                         color: white;
                         height: 4rem;
+                        cursor: pointer;
+
                     }
                 }
             }
